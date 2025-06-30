@@ -1,0 +1,21 @@
+Things that needed to accomplish here:
+
+Backend:
+- Authentication
+- API Authentication
+- Account Creation
+- Login
+- Homepage for e-commerce where all the products are displayed
+- Add to cart buttons
+- Checkout Items (User)
+- Post Items (Seller)
+
+Front end:
+- Login Page
+- Registration Page
+- Homepage (Items are posted)
+- List of Items in the Cart
+- Checkout Items (Billing, Address, Basic Info)
+- Create item posts 
+- Profile variation (user, seller - with seller have additional functionalities)
+- Page authentication

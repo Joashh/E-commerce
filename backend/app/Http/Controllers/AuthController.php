@@ -17,7 +17,12 @@ class AuthController extends Controller
             'password' => Hash::make($request->password), // Hash the password
         ]);
 
-        return response()->json(['message' => 'User Successfully Registered', 'user' => $user], 201);
+        $token =  $user->createToken($request->name);
+        return 
+        [
+            'user'=>$user,
+            'token' => $token
+        ];
     }
 
      public function login(Request $request)
@@ -29,8 +34,15 @@ class AuthController extends Controller
         }
 
         // You can generate a basic token manually (for simplicity)
-        $token = base64_encode(Str::random(40));
+        $token =  $user->createToken($user->name);
 
         return response()->json(['message' => 'Login successful', 'token' => $token, 'user' => $user]);
+    }
+
+    public function logout(Request $request)
+    {
+        $request->user()->tokens()->delete();
+
+        return['message' => 'you are logout.'];
     }
 }
