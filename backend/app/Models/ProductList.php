@@ -10,5 +10,5 @@ class ProductList extends Model
 {
     use HasFactory;
      protected $table = 'product_list';
-    protected $fillable = ['name', 'description', 'price', 'availability', 'category', 'posted_id'];
+    protected $fillable = ['img_path','name', 'description', 'price', 'availability', 'category', 'posted_id'];
 }
